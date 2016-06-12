@@ -1,0 +1,131 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+@import "www/lib/ionic/scss/ionic";
+
+#main {
+  background-color: #8e8e8e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin: -1px;
+
+  .row {
+    height: percentage(1/6);
+  }
+
+  .row + .row {
+    margin: 0;
+  }
+
+  .col {
+    padding: 1px;
+    height: 100%;
+  }
+
+  .col + .col {
+    padding: 1px;
+  }
+
+  .col-result {
+    overflow-y: auto;
+  }
+
+  .result-table {
+    display: table;
+    border-collapse:collapse;
+    width: 100%;
+    height: 100%;
+    background-color: #4c4c4c;
+    text-align: right;
+
+    .result-row {
+      display: table-row;
+
+      .result {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 36px;
+        font-size: 36px;
+        padding: 10px;
+
+        p {
+          margin: 0;
+          padding: 0;
+          color: #fff;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+
+  $button-classic-bg: #d6d6d6;
+  $button-numeric-bg: #e0e0e0;
+  $button-operator-bg: #f79231;
+
+  $button-classic-active-bg: darken($button-classic-bg, 10%);
+  $button-numeric-active-bg: darken($button-numeric-bg, 10%);
+  $button-operator-active-bg: darken($button-operator-bg, 10%);
+
+  .button {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 36px;
+    color: #000;
+    background-color: $button-classic-bg;
+
+    .icon:before {
+      font-size: 36px;
+    }
+
+    &.active,
+    &.activated {
+      background-color: $button-classic-active-bg;
+    }
+
+    &.button-numeric {
+      background-color: $button-numeric-bg;
+      color: #000;
+
+      &.active,
+      &.activated {
+        background-color: $button-numeric-active-bg;
+      }
+    }
+
+    &.button-operator {
+      background-color: $button-operator-bg;
+      color: #fff;
+      font-size: 48px;
+
+      &.active,
+      &.activated {
+        background-color: $button-operator-active-bg;
+      }
+    }
+  }
+
+  .empty {
+    background-color: $button-classic-bg;
+    height: 100%;
+  }
+}

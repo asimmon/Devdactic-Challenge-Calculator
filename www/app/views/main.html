@@ -1,0 +1,126 @@
+<ion-view view-title="Calculatrice">
+    <ion-content scroll="false" id="main">
+        <div class="row row-no-padding">
+            <div class="col col-result">
+                <div class="result-table">
+                    <div class="result-row">
+                        <div class="result">
+                            <p>{{vm.display}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-no-padding">
+            <div class="col">
+                <button class="button button-block"
+                        ng-click="vm.back()"
+                        ng-show="vm.isTyping"
+                        on-hold="vm.clear()">
+                    <i class="icon ion-backspace-outline"></i>
+                </button>
+                <button class="button button-block"
+                        ng-click="vm.clear()"
+                        ng-hide="vm.isTyping">
+                    C
+                </button>
+            </div>
+            <div class="col col-50">
+                <div class="empty"></div>
+            </div>
+            <div class="col">
+                <button class="button button-block button-operator" ng-click="vm.append('/')">
+                    ÷
+                </button>
+            </div>
+        </div>
+
+        <div class="row row-no-padding">
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('7')">
+                    7
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('8')">
+                    8
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('9')">
+                    9
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-operator" ng-click="vm.append('*')">
+                    ×
+                </button>
+            </div>
+        </div>
+
+        <div class="row row-no-padding">
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('4')">
+                    4
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('5')">
+                    5
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('6')">
+                    6
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-operator" ng-click="vm.append('-')">
+                    −
+                </button>
+            </div>
+        </div>
+
+        <div class="row row-no-padding">
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('1')">
+                    1
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('2')">
+                    2
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('3')">
+                    3
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-operator" ng-click="vm.append('+')">
+                    +
+                </button>
+            </div>
+        </div>
+
+        <div class="row row-no-padding">
+            <div class="col col-50">
+                <button class="button button-block button-numeric" ng-click="vm.append('0')">
+                    0
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-numeric" ng-click="vm.append('.')">
+                    .
+                </button>
+            </div>
+            <div class="col">
+                <button class="button button-block button-operator" ng-click="vm.compute()">
+                    =
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
